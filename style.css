@@ -1,7 +1,12 @@
+:root {
+    --s1-color: white;
+    --s2-color: rgb(255, 255, 255);
+}
+
 *,
 *::before,
 *::after {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -18,33 +23,65 @@ body>:first-child {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     width: 40%;
     text-align: center;
+    background-image: url(/images/pray.jpg);
+    background-size: cover;
+    color: var(--s1-color);
 }
 
 /* Target "side hero" firstchild div */
 body>:first-child>:first-child {
     display: flex;
     justify-content: center;
-    min-height: 15%;
-    border: 1px solid red;
+    height: min(150px, 100%);
+    /* border: 1px solid red; */
+    align-items: center;
+    font-size: 40px;
+
 }
 
 body>div>p {
-    border: 1px solid yellow;
+    /* border: 1px solid yellow; */
     position: absolute;
     bottom: 0px;
     width: inherit;
 }
 
+body>div>p>a {
+    color: inherit;
+}
+
 /* Target "side hero" grandchild div */
 body>div>div>div {
-    background-image: ;
-    border: 1px solid green;
+    width: 150px;
+    height: 100%;
+    flex: 0 1 auto;
+    background-image: url(/images/christianity.png);
+    background-size: cover;
+    filter: invert(94%) sepia(0%) saturate(7476%) hue-rotate(63deg) brightness(107%) contrast(100%);
 }
 
 /* Target first "side hero" div sibling */
 body>div+div {
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #CDCDCD;
+}
+
+.s1 {
+    flex: 1 0 auto;
+}
+
+.formContainer {
+    /* border: 1px solid purple; */
+    flex: 1 0 auto;
+    background-color: #161B1F;
+}
+
+.s3 {
+    flex: 1 0 auto;
 }
