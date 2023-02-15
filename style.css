@@ -1,6 +1,6 @@
 :root {
     --s1-color: white;
-    --s2-color: rgb(255, 255, 255);
+    --colorful: rgb(233, 132, 247);
 }
 
 *,
@@ -39,7 +39,7 @@ body>:first-child>:first-child {
     /* border: 1px solid red; */
     align-items: center;
     font-size: 40px;
-
+    background-color: rgba(0, 0, 0, 0.301);
 }
 
 body>div>p {
@@ -57,7 +57,7 @@ body>div>p>a {
 body>div>div>div {
     width: 150px;
     height: 100%;
-    flex: 0 1 auto;
+    flex: 0 1 1;
     background-image: url(/images/christianity.png);
     background-size: cover;
     filter: invert(94%) sepia(0%) saturate(7476%) hue-rotate(63deg) brightness(107%) contrast(100%);
@@ -65,23 +65,65 @@ body>div>div>div {
 
 /* Target first "side hero" div sibling */
 body>div+div {
-    flex-grow: 1;
+    flex: 1 1 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     background-color: #CDCDCD;
 }
 
+body>div+div>div {
+    /* border: 1px solid green; */
+    padding-left: 40px;
+    padding-right: 20%;
+    padding-top: 20px;
+}
+
 .s1 {
-    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 0;
+    font-size: 25px;
+    justify-content: center;
+}
+
+.s1>p:last-child {
+    /* border: 1px solid yellow; */
+    margin-top: 40px;
 }
 
 .formContainer {
     /* border: 1px solid purple; */
-    flex: 1 0 auto;
+    flex: 1 0 0;
     background-color: #161B1F;
 }
 
+h1 {
+    color: var(--s1-color);
+}
+
+label {
+    color: var(--s1-color);
+}
+
+form>div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-top: 30px;
+}
+
+form>div>div {
+    /* border: 1px solid purple; */
+    flex: 1 1 40%;
+    min-width: fit-content;
+}
+
+form>div>div>label>input {
+    /* border: 1px solid purple; */
+    width: 100%;
+}
+
 .s3 {
-    flex: 1 0 auto;
+    flex: 1 0 0;
 }
